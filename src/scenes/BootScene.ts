@@ -6,6 +6,13 @@ export class BootScene extends Phaser.Scene {
     super('BootScene');
   }
 
+  preload() {
+    this.load.image('house', '/assets/house.png');
+    this.load.image('market', '/assets/market.png');
+    this.load.image('road', '/assets/road.png');
+    this.load.image('wood', '/assets/wood.png');
+  }
+
   create() {
     const hasSave = saveManager.load();
 
